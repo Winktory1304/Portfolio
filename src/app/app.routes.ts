@@ -3,7 +3,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { ImprintComponent } from './imprint/imprint.component';
 
 export const routes: Routes = [
-{ path: '', redirectTo: 'main', pathMatch: 'full' }, 
+  { path: '', redirectTo: 'main', pathMatch: 'full' }, 
   { path: 'main', component: MainContentComponent },  
   { path: 'imprint', component: ImprintComponent },   
   { path: '**', redirectTo: 'main' } 
