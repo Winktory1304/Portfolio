@@ -5,6 +5,7 @@ section {
     z-index: 2;
 }
 
+
 nav {
     @include dFlex($jc: space-between !important);
     max-width: 1262px;
@@ -62,6 +63,7 @@ nav {
 
     a:hover {
         color: #3DCFB6;
+        
     }
 }
 
@@ -71,19 +73,19 @@ nav {
     flex-direction: column;
     font-family: "Karla", sans-serif;
 
-    &:hover {
+    // &:hover {
 
-        h4 {
-            -webkit-text-stroke: 1px #3DCFB6;
-            color: transparent;
-        }
+    //     h4 {
+    //         -webkit-text-stroke: 1px #3DCFB6;
+    //         color: transparent;
+    //     }
 
-        h3 {
-            -webkit-text-stroke: 1px #FFFFFF;
-            color: transparent;
-        }
+    //     h3 {
+    //         -webkit-text-stroke: 1px #FFFFFF;
+    //         color: transparent;
+    //     }
 
-    }
+    // }
 
     .name {
         color: #FFFFFF;
@@ -135,12 +137,12 @@ nav {
         }
     }
 
-    &:hover {
-        h3 {
-            -webkit-text-stroke: 1px #FFFFFF;
-            color: transparent;
-        }
-    }
+    // &:hover {
+    //     h3 {
+    //         -webkit-text-stroke: 1px #FFFFFF;
+    //         color: transparent;
+    //     }
+    // }
 }
 
 .mobile_menu {
@@ -151,6 +153,7 @@ nav {
             height: 40px;
             width: 40px;
         }
+        
     }
 
     &:hover {
