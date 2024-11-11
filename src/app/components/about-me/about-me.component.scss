@@ -1,0 +1,83 @@
+@import '../../../styles.scss';
+@import '../../../mixin.scss';
+
+section {
+    background-color: #1C1C1C;
+    height: auto;
+
+    @media(max-width: 1110px) {
+        height: auto;
+    }
+
+    .section_content {
+        height: auto;
+        @include formattingContent($jc: space-between);
+        @include contentPadding();
+        max-width: 1260px;
+
+        @media (max-width: 1110px) {
+            height: auto;
+        }
+
+        @media(max-width: 880px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.my_picture {
+    margin-top: 60px;
+
+    @media(max-width: 880px) {
+        @include dFlex($ai: normal, $jc: center);
+        width: 100%;
+    }
+
+    img {
+        position: absolute;
+        max-width: 35%;
+        object-fit: cover;
+        border-radius: 25px;
+
+        @media(max-width: 880px) {
+            max-width: 100%;
+            position: relative;
+        }
+    }
+
+
+    .background {
+        z-index: 1;
+        margin-top: 40px;
+
+        @media(max-width: 880px) {
+            display: none;
+        }
+    }
+
+    .foreground {
+        z-index: 2;
+        margin-left: 40px;
+
+        @media(max-width: 880px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.about_me {
+    width: 45%;
+    margin-top: 80px;
+
+    @media(max-width: 1110px) {
+        margin-top: 20px;
+    }
+
+    @media(max-width: 880px) {
+        width: 100%;
+    }
+
+    .info_container {
+        @include infoBox();
+    }
+}

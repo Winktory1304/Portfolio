@@ -1,0 +1,73 @@
+{
+    "about_me": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "who_i_am": "Wer ich bin",
+    "about_me_text": "Hi, ich bin eine deutschsprachiger Frontend Entwickler mit Sitz in Berlin. Getrieben von den unbegrenzten Möglichkeiten in der IT, begeistert es mich, visuell ansprechende und intuitive Websites sowie Anwendungen zu gestalten.",
+    "location_text": "Ich bin flexibel, was den Arbeitsort betrifft, und kann sowohl vor Ort als auch remote effektiv arbeiten.",
+    "mindset_text": "Ich bin offen für neue Herausforderungen und stets bestrebt, mein Wissen kontinuierlich zu erweitern.",
+    "profession_text": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu übersetzen. So helfe ich dir, deine Ziele zu erreichen und deine Visionen zum Leben zu erwecken.",
+    "frontend_developer": "Frontend Entwickler",
+    "my_work": "Meine Arbeit",
+    "contact_me": "Kontakt",
+    "available_for_remote": "Verfügbar für Remote-Arbeit",
+    "based_in": "Sitz Berlin",
+    "open_to_work": "Offen für Arbeit",
+    "technologies": "Technologien",
+    "my_journey": "Meine berufliche Reise hat mich zu verschiedenen Projekten geführt, bei denen ich eine Vielzahl von Frontend-Technologien und -Konzepten angewendet habe. Ich bin offen dafür, neue Technologien und Methoden zu übernehmen, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Welt der Webentwicklung auf dem neuesten Stand zu bleiben.",
+    "you_need": "Weitere",
+    "another_skill": "Skills nötig",
+    "feel_free_to_contact": "Zögere nicht, mich zu kontaktieren. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+    "lets_talk": "Lass uns reden",
+    "featured_projects": "Meine Projekte",
+    "explore_projects": "Entdecke hier eine Auswahl meiner Arbeiten – Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "projects_details": "Worum geht es bei diesem Projekt?",
+    "projectPopUp": {
+        "join": {
+            "description": "Ein Aufgabenmanager, inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+        },
+        "el_pollo_loco": {
+            "description": "Ein objektorientiertes Jump-, Run- und Wurfspiel. Führen Sie Scarr, den Ork, durch Hindernisse, sammeln Sie Münzen und Äxte und besiegen Sie den Troll, um den Schatz für seine Familie zu finden."
+        },
+        "dabubble": {
+            "description": "Diese App ist eine Slack-Klon-App. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robuster Kanalorganisation."
+        }
+    },
+    "reviewsTitle": "Was meine Kollegen über mich sagen",
+    "reviews": {
+        "0": {
+            "quote": "Thomas ist ein äußerst engagierter Mitarbeiter. Seine Fähigkeit, komplexe Sachverhalte verständlich zu erklären, ist beeindruckend und hilft uns, auch bei schwierigen Aufgaben den Durchblick zu behalten. Er geht Herausforderungen proaktiv an und findet oft kreative Lösungsansätze.",
+            "author": "K. Meier - Team Partner"
+        },
+        "1": {
+            "quote": "Es ist eine Freude, mit Thomas zusammenzuarbeiten. Er ist zuverlässig und sehr gewissenhaft, was ihm das Vertrauen des gesamten Teams einbringt. Selbst unter Zeitdruck bleibt er ruhig und unterstützt seine Kollegen, um gemeinsam zum Erfolg zu kommen.",
+            "author": "L. Schulz - Frontend-Entwickler"
+        },
+        "2": {
+            "quote": "Ich schätze an Thomas besonders seine präzise und strukturierte Arbeitsweise. Er behält auch bei großen Projekten den Überblick und motiviert das Team mit seiner positiven Einstellung. Sein Einsatz und seine Unterstützung machen ihn zu einem wertvollen Teammitglied.",
+            "author": "M. Becker - Frontend-Entwickler"
+        }
+    },
+    "lets_work": "Lass uns gemeinsam",
+    "together": "etwas schaffen",
+    "problem_to_solve": "Du brauchst eine Lösung für ein Problem?",
+    "contact_form": "Schreibe mir über das Formular. Ich freue mich von dir zu hören, deine Idee kennenzulernen und mit meiner Arbeit etwas bei deinem Projekt beizutragen.",
+    "need_developer": "Du brauchst eine Frontend Entwickler?",
+    "customers_name": "Wie ist dein Name?",
+    "customers_mail": "Wie ist deine Email?",
+    "customers_concerns": "Wie kann ich dir helfen?",
+    "placeholder_name": "Dein Name hier",
+    "placeholder_error_name": "Ups! Dein Name fehlt",
+    "placeholder_email": "deineemail@email.com",
+    "placeholder_error_email": "Hoppla! Deine E-Mail wird benötigt",
+    "placeholder_message": "Hallo Thomas, ich interessiere mich für...",
+    "placeholder_error_message": "Was brauchst du für die Entwicklung?",
+    "privacy_policy_part1": "Ich habe die",
+    "privacy_policy_part2": "Datenschutzerklärung",
+    "privacy_policy_part3": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "say_hello": "Sag Hi ;)",
+    "imprint": "Impressum",
+    "back_to_homepage": "Zurück zur Startseite",
+    "web_developer": "Web Entwickler",
+    "switzerland": "Berlin, Deutschland"
+}
