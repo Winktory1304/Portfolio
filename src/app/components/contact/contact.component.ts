@@ -20,7 +20,7 @@ export class ContactComponent {
   contactData = {
     name: "",
     email: "",
-    message: ""
+    message: "",
   }
 
   checkboxIsBlank: string = 'assets/img/checkbox_blank.png';
@@ -50,7 +50,7 @@ export class ContactComponent {
 
 
   post = {
-    endPoint: 'https://thomas.com/sendMail.php',
+    endPoint: 'https://thomas-thw-winkler/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -63,15 +63,15 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      // Prüfe, ob die Daten korrekt sind
+      // checkt ob alle Daten korrekt sind
       console.log("Contact data:", this.contactData);
 
-      // Die Anfrage absenden
+      //  Anfrage absenden
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
             console.log("Email sent successfully:", response);
-            ngForm.resetForm();  // Formular zurücksetzen nach erfolgreichem Senden
+            ngForm.resetForm();  // Formular wird zurückgesetzt wenn das senden erfolgreich war
           },
           error: (error) => {
             console.error('Error occurred:', error);

@@ -24,7 +24,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         $headers   = array();
         $headers[] = 'MIME-Version: 1.0';
-        $headers[] = 'Content-type: application/javascript; charset=utf-8';
+        $headers[] = 'Content-type: atext/html;; charset=utf-8';
 
         // Additional headers
         $headers[] = "From: thomase.com";
