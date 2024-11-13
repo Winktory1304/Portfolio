@@ -46,15 +46,15 @@ export class ProjectsComponent implements OnInit {
       imageSrc: "assets/img/el-pollo-loco-preview.png",
       descriptionKey: "el_pollo_loco"
     },
-    {
-      number: 3,
-      title: "DABubble",
-      technologies: this.getTechnologiesForDABubble(),
-      githubLink: "",
-      livetestLink: "",
-      imageSrc: "assets/img/el-pollo-loco-preview.png",
-      descriptionKey: "daBubble"
-    }
+    // {
+    //   number: 3,
+    //   title: "DABubble",
+    //   technologies: this.getTechnologiesForDABubble(),
+    //   githubLink: "",
+    //   livetestLink: "",
+    //   imageSrc: "assets/img/el-pollo-loco-preview.png",
+    //   descriptionKey: "daBubble"
+    // }
   ];
 
 
@@ -126,13 +126,13 @@ export class ProjectsComponent implements OnInit {
   }
 
 
-  getTechnologiesForDABubble() {
-    return [
-      { icon: "/assets/img/html-icon-green.png", name: "HTML" },
-      { icon: "/assets/img/css-icon-green.png", name: "CSS" },
-      { icon: "/assets/img/typescript-icon-green.png", name: "TypeScript" },
-      { icon: "/assets/img/angular-icon-green.png", name: "Angular" },
-      { icon: "/assets/img/firebase-icon-green.png", name: "Firebase" }
-    ];
-  }
+  // getTechnologiesForDABubble() {
+  //   return [
+  //     { icon: "/assets/img/html-icon-green.png", name: "HTML" },
+  //     { icon: "/assets/img/css-icon-green.png", name: "CSS" },
+  //     { icon: "/assets/img/typescript-icon-green.png", name: "TypeScript" },
+  //     { icon: "/assets/img/angular-icon-green.png", name: "Angular" },
+  //     { icon: "/assets/img/firebase-icon-green.png", name: "Firebase" }
+  //   ];
+  // }
 }
