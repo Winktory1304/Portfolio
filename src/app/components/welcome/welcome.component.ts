@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { SmoothScrollDirective } from '../../smooth-scroll.directive';
 
 @Component({
   selector: 'app-welcome',
   standalone: true,
   imports: [
     HeaderComponent,
-    TranslateModule
+    TranslateModule,
+    SmoothScrollDirective
   ],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss'

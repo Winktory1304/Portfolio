@@ -13,14 +13,14 @@
                     <h1>Thomas Winkler</h1>
                 </div>
                 <div class="btn_section">
-                    <a href="#aboutProjectsSection">{{ 'my_work' | translate }}</a>
-                    <a href="#aboutContactSection">{{ 'contact_me' | translate }}</a>
+                    <a [appSmoothScroll]="'aboutProjectsSection'">{{ 'my_work' | translate }}</a>
+                    <a [appSmoothScroll]="'aboutContactSection'">{{ 'contact_me' | translate }}</a>
                 </div>
             </div>
             <div class="header_contacts">
-                <a class="mail" href="#aboutContactSection"><span>thomaswinkler88&#64;googlemail.com</span></a>
+                <a class="mail" [appSmoothScroll]="'aboutContactSection'"><span>thomaswinkler88&#64;googlemail.com</span></a>
                 <div class="margin">
-                    <a class="mail_icon" href="#aboutContactSection">
+                    <a class="mail_icon" [appSmoothScroll]="'aboutContactSection'">
                         <img [src]="mailImageSrc" (mouseover)="mailImageSrc='assets/img/mail-icon-white.png'"
                             (mouseout)="mailImageSrc='assets/img/mail-icon-green.png'" alt="">
                     </a>

@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { SmoothScrollDirective } from '../../smooth-scroll.directive';
 
 @Component({
   selector: 'app-technologies',
   standalone: true,
   imports: [
-    TranslateModule
+    TranslateModule,
+    SmoothScrollDirective
   ],
   templateUrl: './technologies.component.html',
   styleUrl: './technologies.component.scss'
