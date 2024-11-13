@@ -7,7 +7,6 @@ import { SmoothScrollDirective } from '../../smooth-scroll.directive';
   selector: 'app-welcome',
   standalone: true,
   imports: [
-    HeaderComponent,
     TranslateModule,
     SmoothScrollDirective
   ],

@@ -2,13 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { SmoothScrollDirective } from '../../smooth-scroll.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
     CommonModule,
-    TranslateModule
+    TranslateModule,
+    SmoothScrollDirective
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'

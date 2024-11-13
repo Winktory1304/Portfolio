@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { SmoothScrollDirective } from '../../smooth-scroll.directive';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
-    TranslateModule
+    TranslateModule,
+    SmoothScrollDirective
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

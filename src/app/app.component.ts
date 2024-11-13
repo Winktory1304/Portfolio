@@ -18,15 +18,11 @@ import { FooterComponent } from "./shared/footer/footer.component";
   imports: [
     CommonModule,
     RouterOutlet,
-    MainContentComponent,
     TranslateModule,
     TranslateConfigModule,
     HttpClientModule,
     FormsModule,
-    HeaderComponent,
-    FooterComponent
 ],
-
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

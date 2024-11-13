@@ -6,6 +6,11 @@ section {
 }
 
 
+
+.pointer_cursor {
+    cursor: pointer;
+  }
+
 nav {
     @include dFlex($jc: space-between !important);
     max-width: 1262px;
@@ -63,7 +68,7 @@ nav {
 
     a:hover {
         color: #3DCFB6;
-        
+
     }
 }
 
@@ -153,7 +158,7 @@ nav {
             height: 40px;
             width: 40px;
         }
-        
+
     }
 
     &:hover {

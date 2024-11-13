@@ -29,6 +29,10 @@
     }
 }
 
+[appSmoothScroll] {
+    cursor: pointer !important;
+}
+
 @mixin aStyling() {
     a {
         color: #FFFFFF;
@@ -74,6 +78,8 @@
         }
     }
 }
+
+
 
 @mixin btnStyling() {
     button {
@@ -153,6 +159,8 @@
             margin-right: 10px;
         }
     }
+
+
 
     .content_sector {
         margin-top: 30px;
