@@ -1,0 +1,84 @@
+@import '../../../styles.scss';
+@import '../../../mixin.scss';
+
+section {
+    background-color: #1C1C1C;
+    height: auto;
+
+    @media(max-width: 1110px) {
+        height: auto;
+    }
+
+    .section_content {
+        height: auto;
+        @include formattingContent($jc: space-between);
+        @include contentPadding();
+        max-width: 1260px;
+
+        @media (max-width: 1110px) {
+            height: auto;
+        }
+
+        @media(max-width: 930px) {
+            flex-direction: column;
+        }
+    }
+}
+
+.my_picture {
+    margin-top: 40px;
+
+    @media(max-width: 930px) {
+        @include dFlex($ai: normal, $jc: center);
+        width: 100%;
+    }
+
+    img {
+        position: absolute;
+        width: 400px; // Feste Breite (z.B. 300px oder eine andere geeignete Größe)
+        height: auto; // Automatische Höhe, um das Seitenverhältnis zu bewahren
+        object-fit: cover;
+        border-radius: 25px;
+
+        @media(max-width: 930px) {
+            width: 200px;
+            position: relative;
+        }
+    }
+
+
+    .background {
+        z-index: 1;
+        margin-top: 40px;
+
+        @media(max-width: 930px) {
+            display: none;
+        }
+    }
+
+    .foreground {
+        z-index: 2;
+        margin-left: 40px;
+
+        @media(max-width: 930px) {
+            margin-left: 0;
+        }
+    }
+}
+
+.about_me {
+    width: 45%;
+    margin-top: 80px;
+
+    @media(max-width: 1110px) {
+        margin-top: 20px;
+    }
+
+    @media(max-width: 930px) {
+        width: 100%;
+    }
+
+    .info_container {
+        @include infoBox();
+    }
+}

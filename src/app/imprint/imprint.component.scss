@@ -1,0 +1,51 @@
+@import '../../styles.scss';
+@import '../../mixin.scss';
+
+section {
+    background-image: url("/assets/img/landingpage-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .section_content {
+        padding-top: 80px;
+        font-family: 'Karla', sans-serif;
+    }
+
+    h1 {
+        color: #3DCFB6;
+        font-size: 60px;
+
+        @media(max-width: 465px) {
+            font-size: 40px;
+        }
+    }
+
+    .imprint_content {
+        color: white;
+        font-size: 17px;
+
+        @media(max-width: 465px) {
+            font-size: 15px;
+        }
+    }
+}
+
+.back_to_homepage {
+    margin-top: 80px;
+
+    a {
+        color: #ffffff;
+        text-decoration: none;
+
+        &:hover {
+            color: #3DCFB6;
+        }
+
+        img {
+            height: 14px;
+            width: 14px;
+            margin-bottom: -2px;
+            margin-left: 5px;
+        }
+    }
+}

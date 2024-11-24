@@ -1,0 +1,250 @@
+@import '../../../styles.scss';
+@import '../../../mixin.scss';
+
+
+section {
+    background-color: #1C1C1C;
+    margin-top: -3px;
+
+    @media (max-width: 1110px) {
+        height: auto;
+    }
+
+    .section_content {
+        position: relative;
+        max-width: 1260px;
+        padding-top: 90px;
+        height: auto;
+        @include contentPadding();
+        @include formattingContent($jc: space-between);
+
+        @media (max-width: 1110px) {
+            height: auto;
+        }
+
+        @media (max-width: 880px) {
+            flex-direction: column;
+        }
+
+
+    }
+}
+
+.error_message {
+    margin-top: 10px;
+    color: #EC7B7BCC;
+}
+
+.success-notification, .wrongEmail-notification {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    .notification-message, .wrong-email-message {
+        position: fixed;
+        top: 40%;
+        background-color: rgba(28, 28, 28, 0.95);
+        color: #3DCFB6;
+        padding: 25px;
+        border: 1px solid #3DCFB6;
+        border-radius: 15px;
+        text-align: center;
+        width: 50px;
+        font-size: 1rem;
+        font-family: "Fira Code", sans-serif;
+    }
+}
+
+.about_contact {
+    width: 45%;
+    margin-top: 10px;
+    text-align: justify;
+
+    @media (max-width: 880px) {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .info_container {
+        @include infoBox();
+        background-color: transparent;
+        border: none;
+        padding: 0;
+
+        @media(max-width: 465px) {
+            padding: 0;
+        }
+
+        .content_sector {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+h2 {
+    font-family: "Fira Code", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 1px;
+    color: #3DCFB6;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    @media (max-width: 1110px) {
+        text-align: left;
+    }
+
+    @media (max-width: 880px) {
+        font-size: 23px;
+    }
+}
+
+.lets_talk_section {
+    display: flex;
+    margin-top: 20px;
+}
+
+span {
+    font-size: 14px;
+}
+
+.contact_form {
+    margin-top: 50px;
+    width: 50%;
+
+    @media (max-width: 880px) {
+        width: 100%;
+    }
+
+    .contact_section {
+        padding: 30px;
+        border-top: 1px solid #3DCFB6;
+        border-bottom: 1px solid #3DCFB6;
+        margin: 0;
+        text-align: start;
+
+        @media(max-width: 465px) {
+            padding: 20px;
+        }
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 500;
+    }
+
+    input {
+        background-color: transparent;
+        border: none;
+        width: 100%;
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: white;
+        height: 24px;
+        outline: none;
+
+        @media (max-width: 880px) {
+            font-size: 16px;
+        }
+
+        @media(max-width: 465px) {
+            font-size: 14px;
+        }
+
+        :focus {
+            color: white;
+        }
+
+        input:-webkit-autofill {
+            background-color: transparent !important;
+            -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+            box-shadow: 0 0 0px 1000px transparent inset !important;
+        }
+    }
+
+    ::placeholder {
+        color: #a0a0a0;
+        opacity: 1;
+    }
+
+    .error-placeholder::placeholder {
+        color: #EC7B7BCC;
+        letter-spacing: 0.5px;
+    }
+
+    .error-text {
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        color: #EC7B7BCC;
+        letter-spacing: 0.5px;
+        text-align: start;
+    }
+}
+
+.color {
+    color: #3DCFB6 !important;
+}
+
+.privacy_policy_check {
+    text-align: start;
+    margin-top: 50px;
+    display: flex;
+
+    @media(max-width: 1110px) {
+        align-items: center;
+    }
+
+    span {
+        font-family: 'Karla', sans-serif;
+        font-size: 15px;
+        color: white;
+        margin-left: 10px;
+
+        @media(max-width: 465px) {
+            font-size: 14px;
+        }
+    }
+
+    a {
+        font-family: 'Fira Code', sans-serif;
+        text-decoration: none;
+        color: #3DCFB6;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    img {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.btn_section {
+    margin-top: 50px;
+    letter-spacing: 1px;
+    @include btnStyling();
+
+    @media (max-width: 880px) {
+        margin-bottom: 50px;
+    }
+
+    button {
+        @media(max-width: 465px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 13px;
+        }
+    }
+}

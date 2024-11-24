@@ -1,0 +1,32 @@
+<section>
+    <div class="section_content">
+        <div class="footer_left">
+            <div class="logo">
+                <div class="abbreviation">
+                    <h3 class="fristname">Thomas</h3>
+                    <h4 class="first_name_letter">T</h4>
+                    <h4 class="last_name_letter">W</h4>
+                </div>
+                <div class="name">
+                    <h3 class="lastname">Winkler</h3>
+                </div>
+            </div>
+            <div class="profession_location">
+                <span>{{ 'web_developer' | translate }}</span>
+                <span>{{ 'germany' | translate }}</span>
+            </div>
+        </div>
+        <div class="footer_center">
+            <span>&copy; Thomas Winkler 2024</span>
+        </div>
+        <div class="footer_right">
+            <a href="https://github.com/Winktory1304" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/thomas-winkler-23b2861bb/" target="_blank">LinkedIn</a>
+            <a [appSmoothScroll]="'aboutContactSection'">Email</a>
+            <a href="/imprint">{{ 'imprint' | translate }}</a>
+        </div>
+    </div>
+    <div class="footer_center_mobile">
+        <span>&copy; Thomas Winkler 2024</span>
+    </div>
+</section>

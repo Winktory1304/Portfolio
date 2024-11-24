@@ -1,0 +1,100 @@
+<section>
+    <div class="section_content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div class="about_contact">
+            <h4>{{ 'contact_me' | translate }}</h4>
+            <div class="info_container">
+                <h1>{{ 'lets_work' | translate }}<br>{{ 'together' | translate }}</h1>
+                <div class="info_content">
+                    <h2>{{ 'problem_to_solve' | translate }}</h2>
+                    <span>{{ 'contact_form' | translate }}</span>
+                    <div class="lets_talk_section">
+                        <span>{{ 'need_developer' | translate }}&nbsp;</span>
+                        <span class="color">{{ 'lets_talk' | translate }} -&gt;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="contact_form">
+            <!-- Name Input Section -->
+            <div class="contact_section">
+                <h2>{{ 'customers_name' | translate }}</h2>
+                <input
+                    [(ngModel)]="contactData.name"
+                    name="name"
+                    type="text"
+                    [ngClass]="{'error-placeholder': isSubmitted && nameInput.invalid}"
+                    [placeholder]="isSubmitted && nameInput.invalid ? ('placeholder_error_name' | translate) : ('placeholder_name' | translate)"
+                    required
+                    #nameInput="ngModel">
+            </div>
+
+            <!-- Email Input Section -->
+            <div class="contact_section">
+                <h2>{{ 'customers_mail' | translate }}</h2>
+                <input
+                    [(ngModel)]="contactData.email"
+                    name="email"
+                    type="email"
+                    [ngClass]="{'error-placeholder': isSubmitted && emailInput.invalid}"
+                    [placeholder]="isSubmitted && emailInput.invalid ? ('placeholder_error_email' | translate) : ('placeholder_email' | translate)"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                    #emailInput="ngModel">
+            </div>
+
+            <!-- Message Input Section -->
+            <div class="contact_section">
+                <h2>{{ 'customers_concerns' | translate }}</h2>
+                <input
+                    [(ngModel)]="contactData.message"
+                    name="message"
+                    type="text"
+                    [ngClass]="{'error-placeholder': isSubmitted && messageInput.invalid}"
+                    [placeholder]="isSubmitted && messageInput.invalid ? ('placeholder_error_message' | translate) : ('placeholder_message' | translate)"
+                    required
+                    #messageInput="ngModel">
+            </div>
+
+            <!-- Privacy Policy Checkbox -->
+            <div class="privacy_policy_check">
+                <div class="checkbox_sector">
+                    <img
+                        (click)="toggleCheckbox()"
+                        [src]="checkboxError ? 'assets/img/checkbox_blank.png' : checkboxImage"
+                        alt="Checkbox">
+                </div>
+                <span>
+                    {{ 'privacy_policy_part1' | translate }}&nbsp;&nbsp;
+                    <a [routerLink]="['../privacy-policy']">{{ 'privacy_policy_part2' | translate }}</a>&nbsp;&nbsp;
+                    {{ 'privacy_policy_part3' | translate }}
+                </span>
+            </div>
+
+            <!-- Privacy Policy Error -->
+            <div *ngIf="checkboxError" class="error-text">
+                {{ 'privacy_policy_error' | translate }}
+            </div>
+
+            <!-- Submit Button -->
+            <div class="btn_section">
+                <button type="submit">{{ 'say_hello' | translate }}</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Success Notification -->
+<div *ngIf="showSuccessNotification" class="success-notification">
+    <div class="notification-message">
+        <p>{{ 'email_sent_successfully' | translate }}</p>
+    </div>
+</div>
+
+<!-- Incorrect Email Notification -->
+<div *ngIf="emailIsNotCorrect" class="wrongEmail-notification">
+    <div class="wrong-email-message">
+        <p>{{ 'email_is_not_correct' | translate }}</p>
+    </div>
+</div>
+

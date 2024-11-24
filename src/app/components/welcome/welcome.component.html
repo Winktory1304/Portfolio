@@ -1,0 +1,65 @@
+<section>
+    <div class="section_content">
+        <div class="welcome_content">
+            <div class="arrow_down">
+                <a class="animated_button" style="cursor: pointer; " [appSmoothScroll]="'aboutMeSection'">
+                    <p>&#8595;</p>
+                </a>
+                <div class="vector_left"></div>
+            </div>
+            <div class="main_section">
+                <div class="headline">
+                    <h3>{{ 'frontend_developer' | translate }}</h3>
+                    <h1>Thomas Winkler</h1>
+                </div>
+                <div class="btn_section">
+                    <a [appSmoothScroll]="'aboutProjectsSection'">{{ 'my_work' | translate }}</a>
+                    <a [appSmoothScroll]="'aboutContactSection'">{{ 'contact_me' | translate }}</a>
+                </div>
+            </div>
+            <div class="header_contacts">
+                <a class="mail" [appSmoothScroll]="'aboutContactSection'"><span>thomaswinkler88&#64;googlemail.com</span></a>
+                <div class="margin">
+                    <a class="mail_icon" [appSmoothScroll]="'aboutContactSection'">
+                        <img [src]="mailImageSrc" (mouseover)="mailImageSrc='assets/img/mail-icon-white.png'"
+                            (mouseout)="mailImageSrc='assets/img/mail-icon-green.png'" alt="">
+                    </a>
+                    <a href="https://github.com/dashboard" target="_blank">
+                        <img [src]="githubImageSrc" (mouseover)="githubImageSrc='assets/img/github-icon-white.png'"
+                            (mouseout)="githubImageSrc='assets/img/github-icon-green.png'" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com/in/thomas-winkler-23b2861bb/" target="_blank">
+                        <img [src]="linkedinImageSrc"
+                            (mouseover)="linkedinImageSrc='assets/img/linkedin-icon-white.png'"
+                            (mouseout)="linkedinImageSrc='assets/img/linkedin-icon-green.png'" alt="">
+                    </a>
+                    <div class="vector_right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner_content">
+                <div class="content-inner">
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'available_for_remote' | translate }}</p>
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'frontend_developer' | translate }}</p>
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'based_in' | translate }}</p>
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'open_to_work' | translate }}</p>
+                </div>
+                <div class="content-inner">
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'available_for_remote' | translate }}</p>
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'frontend_developer' | translate }}</p>
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'based_in' | translate }}</p>
+                    <img src="assets/img/point-green.png" alt="">
+                    <p>{{ 'open_to_work' | translate }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

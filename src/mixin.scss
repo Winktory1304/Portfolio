@@ -1,0 +1,215 @@
+@mixin dFlex ($d: flex, $jc: center, $ai: center) {
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin formattingContent ($d: flex, $jc: center) {
+    display: $d;
+    justify-content: $jc;
+}
+
+@mixin contentPadding ($pl: 90px, $pr: 90px) {
+    padding-left: $pl;
+    padding-right: $pr;
+
+    @media (max-width: 1110px) {
+        padding-left: 50px;  
+        padding-right: 50px; 
+    }  
+
+    @media (max-width: 930) {
+        padding-left: 20px;  
+        padding-right: 20px; 
+    } 
+    
+    @media(max-width: 465px) {
+        padding-left: 10px;  
+        padding-right: 10px;
+    }
+}
+
+[appSmoothScroll] {
+    cursor: pointer !important;
+}
+
+@mixin aStyling() {
+    a {
+        color: #FFFFFF;
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        padding: 15px 33px;
+        border-radius: 27px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: 'Karla', sans-serif;
+        transition: color 0.5s, border 0.5s;
+        text-decoration: none;
+
+        @media(max-width: 1200px) {
+            padding: 13px 30px;
+        }
+
+        @media(max-width: 1110px) {
+            padding: 13px 25px;
+        }
+
+        @media(max-width: 930) {
+            padding: 12px 15px;
+            letter-spacing: 0px;
+        }
+
+        @media (max-width: 605px) {
+            padding-left: 12px;  
+            padding-right: 12px; 
+            font-size: 13px;
+        }
+        
+        @media (max-width: 465px) {
+            padding-left: 9px;  
+            padding-right: 9px; 
+            font-size: 11px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid #3DCFB6;
+            color: #3DCFB6;
+        }
+    }
+}
+
+
+
+@mixin btnStyling() {
+    button {
+        color: #FFFFFF;
+        background-color: transparent;
+        border: 1px solid #FFFFFF;
+        padding: 15px 33px;
+        border-radius: 27px;
+        margin-left: 24px;
+        margin-right: 24px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family: 'Karla', sans-serif;
+        transition: color 0.5s, border 0.5s;
+
+        @media(max-width: 1110px) {
+            padding: 13px 25px;
+        }
+
+        @media(max-width: 930) {
+            padding: 12px 15px;
+            letter-spacing: 0px;
+        }
+
+        @media (max-width: 465px) {
+            padding-left: 9px;  
+            padding-right: 9px; 
+            font-size: 11px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border: 1px solid #3DCFB6;
+            color: #3DCFB6;
+        }
+    }
+}
+
+@mixin infoBox() {
+    background-color: #1F2E2B;
+    border: 1px solid #3DCFB6;
+    border-radius: 25px;
+    padding: 25px;
+    color: #FFFFFF;
+    max-width: 550px;
+    height: auto;
+
+    @media(max-width: 465px) {
+        padding: 20px;
+    }
+
+    h1 {
+        color: #3DCFB6;
+        font-size: 60px;
+        margin: 0;
+        text-align: left;
+        font-family: 'Fira Code', sans-serif;
+        font-weight: 700;
+
+        @media(max-width: 1110px) {
+            font-size: 50px;
+        }
+
+        @media(max-width: 465px) {
+            font-size: 40px;
+        }
+    }
+
+
+    img {
+        height: 32px;
+        width: 32px;
+        margin-right: 18px;
+        align-self: flex-start;
+
+        @media(max-width: 1110px) {
+            margin-right: 10px;
+        }
+    }
+
+
+
+    .content_sector {
+        margin-top: 30px;
+        display: flex;
+        text-align: justify;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 40px;
+        margin-top: 30px;
+        font-family: "Karla", sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+
+        @media(max-width: 1110px) {
+            font-size: 15px;
+        }
+
+        @media(max-width: 465px) {
+            font-size: 13px;
+            margin-bottom: 35px;
+            margin-top: 25px;
+        }
+    }
+
+    span {
+        font-family: 'Karla', sans-serif;
+        font-size: 17px;
+        font-weight: 400;
+        color: #d9d9d9;
+
+        @media(max-width: 1110px) {
+            font-size: 15px;
+        }
+
+        @media(max-width: 465px) {
+            font-size: 13px;
+            text-align: left;
+        }
+    }
+
+    .info_content {
+        margin-top: 20px;
+    }
+
+    .second_headline {
+        display: flex;
+    }
+}

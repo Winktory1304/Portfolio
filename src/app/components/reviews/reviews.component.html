@@ -1,0 +1,35 @@
+<section>
+    <div class="section_content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div class="headline">
+            <h1>{{ 'reviewsTitle' | translate }}</h1>
+        </div>
+        <div class="carousel">
+            <div class="review_container">
+                <ng-container *ngFor="let review of reviews; let i = index">
+                    <div class="review" [ngClass]="{
+                       'active': i === currentIndex,
+                       'prev-review': (i === (currentIndex - 1 + reviewCount) % reviewCount),
+                       'next-review': (i === (currentIndex + 1) % reviewCount)
+                     }">
+                        <p>{{ 'reviews.' + i + '.quote' | translate }}</p>
+                        <span>{{ 'reviews.' + i + '.author' | translate }}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev" (click)="prevReview()">
+                <img [src]="arrowBackImageSrc" (mouseover)="arrowBackImageSrc='assets/img/arrow-back-green.png'"
+                    (mouseout)="arrowBackImageSrc='assets/img/arrow-back-white.png'" alt="">
+            </button>
+            <div class="carousel-indicators">
+                <span *ngFor="let i of [0, 1, 2]" [class.active]="i === currentIndex"></span>
+            </div>
+            <button class="next" (click)="nextReview()">
+                <img [src]="arrowForwardImageSrc"
+                    (mouseover)="arrowForwardImageSrc='assets/img/arrow-forward-green.png'"
+                    (mouseout)="arrowForwardImageSrc='assets/img/arrow-forward-white.png'" alt="">
+            </button>
+        </div>
+    </div>
+</section>

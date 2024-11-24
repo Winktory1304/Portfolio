@@ -1,0 +1,94 @@
+<section>
+    <div class="section_content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div *ngIf="isMobileView && isDialogOpen">
+            <div id="dialogMobile" class="dialog_bg">
+                <app-mobile-details [selectedProject]="selectedProject" (dialogClose)="closeDialog()"
+                    (nextProject)="showNextProject()">
+                </app-mobile-details>
+            </div>
+        </div>
+        <div *ngIf="!isMobileView && isDialogOpen" class="desktop_dialog">
+            <div id="dialog" class="dialog_bg d_none" *ngIf="isDialogOpen">
+                <div class="dialog">
+                    <div class="project_details">
+                        <h1>{{ getFormattedNumber(selectedProject?.number ?? 0) }}</h1>
+                        <h2>{{ selectedProject?.title }}</h2>
+                        <h3>What is this project about?</h3>
+                        <p class="description">{{ 'projectPopUp.' + getProjectKey(selectedProject?.title) + '.description' | translate }}</p>
+                        <div class="project_details_technologies">
+                            <div class="single_technology" *ngFor="let tech of selectedProject?.technologies">
+                                <img [src]="tech.icon" alt="{{ tech.name }} icon">
+                                <span>{{ tech.name }}</span>
+                            </div>
+                        </div>
+                        <div class="project_details_btn_section">
+                            <a href="{{ selectedProject?.githubLink}}">Github</a>
+                            <!-- <a href="{{ selectedProject?.livetestLink}}">Live Test</a> -->
+                        </div>
+                    </div>
+                    <div class="project_image">
+                        <img (click)="closeDialog()" class="close_dialog" [src]="closeDialogImageSrc"
+                            (mouseover)="onHoverCloseDialog(true)" (mouseout)="onHoverCloseDialog(false)"
+                            alt="Close Dialog">
+                        <img src="{{ selectedProject?.imageSrc }}" alt="">
+                        <div (click)="showNextProject()" class="next_project">
+                            <span>next project<img src="../../../assets/img/arrow-forward-green.png" alt=""></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about_projects">
+            <h4>Portfolio</h4>
+            <div class="info_container">
+                <h1>{{ 'featured_projects' | translate }}</h1>
+                <div class="info_content">
+                    <p>{{ 'explore_projects' | translate }}</p>
+                    <div class="content_sector join_sector" (mouseover)="showJoinProject = true"
+                        (mouseout)="showJoinProject = false" (click)="openDialog(0)">
+                        <div class="second_headline">
+                            <h2>Join</h2>
+                        </div>
+                        <div class="project_skills">
+                            <p>HTML <span>|</span> CSS <span>|</span> JavaScript <span>|</span> Firebase</p>
+                        </div>
+                    </div>
+                    <div class="content_sector el_pollo_loco_sector" (mouseover)="showElPolloLocoProject = true"
+                        (mouseout)="showElPolloLocoProject = false" (click)="openDialog(1)">
+                        <div class="second_headline">
+                            <h2>El Pollo Loco</h2>
+                        </div>
+                        <div class="project_skills">
+                            <p>HTML <span>|</span> CSS <span>|</span> JavaScript</p>
+                        </div>
+                    </div>
+                    <!-- <div class="content_sector da_bubble_sector" (mouseover)="showDaBubbleProject = true"
+                        (mouseout)="showDaBubbleProject = false" (click)="openDialog(2)">
+                        <div class="second_headline">
+                            <h2>DA Bubble</h2>
+                        </div>
+                        <div class="project_skills">
+                            <p>Angular <span>|</span> Typescript <span>|</span> Firebase</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="projects_preview">
+            <div class="single_project">
+                <div class="join_project arrangement" [ngClass]="{'hidden': !showJoinProject}">
+                    <img class="foreground" src="assets/img/join-preview.png" alt="">
+                    <img class="background" src="assets/img/backgorund-project-picture.png" alt="">
+                </div>
+                <div class="el_pollo_loco_project arrangement" [ngClass]="{'hidden': !showElPolloLocoProject}">
+                    <img class="foreground" src="assets/img/el-pollo-loco-preview.png" alt="">
+                    <img class="background" src="assets/img/backgorund-project-picture.png" alt="">
+                </div>
+                <!-- <div class="da_bubble_project arrangement" [ngClass]="{'hidden': !showDaBubbleProject}">
+                    <img class="foreground" src="assets/img/el-pollo-loco-preview.png" alt="">
+                    <img class="background" src="assets/img/backgorund-project-picture.png" alt="">
+                </div> -->
+            </div>
+        </div>
+    </div>
+</section>

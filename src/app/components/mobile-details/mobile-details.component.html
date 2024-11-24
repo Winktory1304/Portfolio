@@ -1,0 +1,30 @@
+<section class="dialog_bg">
+    <div class="section_content dialog_mobile">
+        <div class="close_details">
+            <img (click)="closeDialog()" class="close_dialog" [src]="closeDialogImageSrc"
+                (mouseover)="onHoverCloseDialog(true)" (mouseout)="onHoverCloseDialog(false)" alt="Close Dialog">
+        </div>
+        <div class="project_image">
+            <img [src]="selectedProject?.imageSrc" alt="">
+        </div>
+        <div class="project_details">
+            <h1>{{ getFormattedNumber(selectedProject?.number ?? 0) }}</h1>
+            <h2>{{ selectedProject?.title }}</h2>
+            <h3>What is this project about?</h3>
+            <p class="description">{{ 'projectPopUp.' + getProjectKey(selectedProject?.title) + '.description' | translate }}</p>
+            <div class="project_details_technologies">
+                <div class="single_technology" *ngFor="let tech of selectedProject?.technologies">
+                    <img [src]="tech.icon" alt="{{ tech.name }} icon">
+                    <span>{{ tech.name }}</span>
+                </div>
+            </div>
+            <div class="project_details_btn_section">
+                <a href="{{ selectedProject?.githubLink}}">Github</a>
+                <!-- <a href="">Live Test</a> -->
+            </div>
+            <div (click)="showNextProject()" class="next_project">
+                <span>next project<img src="../../../assets/img/arrow-forward-green.png" alt=""></span>
+            </div>
+        </div>
+    </div>
+</section>

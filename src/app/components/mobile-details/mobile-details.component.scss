@@ -1,0 +1,172 @@
+@import '../../../styles.scss';
+@import '../../../mixin.scss';
+
+.dialog_bg {
+
+    .dialog_mobile {
+        background-image: url("/assets/img/landingpage-background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        width: 88%;
+        border: 1px solid #3DCFB6;
+        border-radius: 35px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        overflow-y: auto;
+        scrollbar-width: none;
+
+        .close_details {
+            text-align: end;
+
+
+            img {
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .project_image {
+            width: 100%;
+            align-items: center;
+
+            img {
+                margin-top: -3px;
+                height: 100%;
+                width: 95%;
+                object-fit: cover;
+                border-radius: 20px;
+
+                @media(min-width: 500px) {
+                    height: 100%;
+                    width: 85%;
+                    margin: 0;
+                }
+
+                @media(min-width: 600px) {
+                    height: 100%;
+                    width: 85%;
+                    margin: 0;
+                }
+            }
+        }
+
+        .project_details {
+            text-align: start;
+            margin-top: 20px;
+
+
+            h1 {
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 60px;
+                color: #3DCFB6;
+                margin: 0;
+            }
+
+            h2 {
+                font-family: 'Fira Code', sans-serif;
+                font-weight: 700;
+                font-size: 40px;
+                color: #FFFFFF;
+                text-align: start;
+                margin: 0;
+            }
+
+            h3 {
+                font-family: 'Fira Code', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                color: #FFFFFF;
+                text-align: start;
+                margin: 10px 0;
+            }
+
+            p {
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 13px;
+                color: #3DCFB6;
+                text-align: start;
+                margin: 0;
+            }
+
+            .project_details_technologies {
+                width: 100%;
+                display: flex;
+                color: #FFFFFF;
+                margin-top: 10px;
+                font-family: 'Karla', sans-serif;
+                font-weight: 400;
+                font-size: 16px;
+                flex-wrap: wrap;
+
+                @media(max-width: 1200px) {
+                    font-size: 15px;
+                    margin: 0;
+                }
+            }
+
+            .single_technology {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                margin-right: 20px;
+                margin-top: 10px
+            }
+
+            .project_details_btn_section {
+                @include aStyling();
+                display: flex;
+                gap: 50px;
+                margin-top: 40px;
+
+                @media(max-width:1200px) {
+                    margin-top: 30px;
+                }
+
+                a {
+                    margin: 0;
+                    text-wrap: nowrap;
+                }
+            }
+
+            .project_details_btn_section {
+                margin-top: 20px;
+                justify-content: center;
+
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.next_project {
+    @include dFlex($jc: end);
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #3DCFB6;
+    margin-top: 20px;
+
+    img {
+        width: 15px;
+        height: 15px;
+        margin-right: 12px;
+    }
+
+    span {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,338 @@
+@import '../../../styles.scss';
+@import '../../../mixin.scss';
+
+section {
+    background-color: #1C1C1C;
+    align-content: center;
+    height: auto;
+
+    .section_content {
+        height: auto;
+        max-width: 1260px;
+        @include formattingContent($jc: space-between);
+        @include contentPadding();
+    }
+
+    p {
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+        margin-top: 25px;
+
+        @media(max-width: 605px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.d_none {
+    display: none;
+}
+
+h1 {
+    color: #3DCFB6;
+    font-size: 60px;
+    margin: 0;
+    text-align: left;
+    font-family: 'Fira Code', sans-serif;
+    font-weight: 700;
+    text-wrap: nowrap;
+
+    @media(max-width: 1110px) {
+        font-size: 50px;
+    }
+
+    @media(max-width: 605px) {
+        text-wrap: balance;
+    }
+}
+
+h4 {
+    margin-top: 80px;
+}
+
+.info_content {
+    text-align: left;
+}
+
+.about_projects {
+    width: 50%;
+
+    @media (max-width: 1110px) {
+        width: 90%;
+    }
+
+    @media(max-width: 880px) {
+        width: 100%;
+        margin-top: 80px;
+    }
+
+    .content_sector {
+        width: 100%;
+        height: 65px;
+        padding: 30px;
+        border-top: 1px solid #3DCFB6;
+        border-bottom: 1px solid #3DCFB6;
+        transition: background-color 0.5s ease;
+        @include dFlex($jc: space-between);
+
+        @media(max-width: 880px) {
+            width: 90%;
+        }
+
+        @media(max-width: 605px) {
+            width: 85%;
+        }
+
+        @media(max-width: 465px) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #26524B;
+        }
+
+        .project_skills {
+            display: flex;
+            align-items: center;
+        }
+
+        h2 {
+            font-family: 'Fira Code', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            color: #FFFFFF;
+
+            @media (max-width: 1110px) {
+                font-size: 30px;
+            }
+
+            @media(max-width: 605px) {
+                font-size: 20px;
+            }
+
+            @media(max-width: 465px) {
+                margin: 0;
+            }
+        }
+
+        span {
+            font-family: 'Karla', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: #3DCFB6;
+
+            @media (max-width: 1110px) {
+                font-size: 16px;
+            }
+
+            @media(max-width: 465px) {
+                font-size: 14px;
+            }
+        }
+
+        p {
+            @media(max-width: 465px) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.projects_preview {
+    margin-top: 335px;
+
+    @media (max-width: 1110px) {
+        display: none;
+    }
+
+    .single_project {
+
+        .arrangement {
+            margin-top: -100px;
+            margin-left: 65px;
+        }
+
+        img {
+            width: 320px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 25px;
+        }
+
+        .background {
+            z-index: 1;
+            margin-top: 25px;
+            margin-left: 25px;
+        }
+
+        .foreground {
+            z-index: 2;
+            position: absolute;
+        }
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.dialog_bg {
+    background-color: #1C1C1C;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dialog {
+        background-image: url("/assets/img/landingpage-background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 75%;
+        width: 80%;
+        border: 1px solid #3DCFB6;
+        border-radius: 35px;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        .project_details {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h1 {
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 120px;
+                color: #3DCFB6;
+            }
+
+            h2 {
+                font-family: 'Fira Code', sans-serif;
+                font-weight: 700;
+                font-size: 60px;
+                color: #FFFFFF;
+                text-align: start;
+                margin: 0;
+                text-wrap: nowrap;
+            }
+
+            h3 {
+                font-family: 'Fira Code', sans-serif;
+                font-weight: 400;
+                font-size: 20px;
+                color: #FFFFFF;
+                text-align: start;
+                margin: 10px 0;
+            }
+
+            p {
+                font-family: 'Karla', sans-serif;
+                font-weight: 700;
+                font-size: 16px;
+                color: #3DCFB6;
+                text-align: start;
+            }
+        }
+    }
+
+    .project_details_technologies {
+        width: 100%;
+        display: flex;
+        color: #FFFFFF;
+        margin-top: 10px;
+        font-family: 'Karla', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        flex-wrap: wrap;
+
+        @media(max-width: 1200px) {
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+
+    .single_technology {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-right: 20px;
+        margin-top: 10px
+    }
+
+    .project_details_btn_section {
+        @include aStyling();
+        display: flex;
+        gap: 50px;
+        margin-top: 40px;
+
+        @media(max-width:1200px) {
+            margin-top: 30px;
+        }
+
+        a {
+            margin: 0;
+            text-wrap: nowrap;
+        }
+    }
+
+    .project_image {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+
+        img {
+            width: 85%;
+            object-fit: scale-down;
+            border-radius: 20px;   
+        }
+
+        .close_dialog {
+            width: 45px;
+            height: 45px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.next_project {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #3DCFB6;
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    span {
+        gap: 10px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

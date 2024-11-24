@@ -1,0 +1,33 @@
+<section>
+    <div class="section_content" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+        <div class="about_skills">
+            <h4>{{ 'technologies' | translate }}</h4>
+            <div class="info_container">
+                <h1>{{ 'skills' | translate }}</h1>
+                <div class="info_content">
+                    <p>{{ 'my_journey' | translate }}</p>
+                    <div class="content_sector">
+                        <div class="second_headline">
+                            <h2>{{ 'you_need' | translate }}&nbsp;</h2>
+                            <h2 class="color">{{ 'another_skill' | translate }}?</h2>
+                        </div>
+                        <span>{{ 'feel_free_to_contact' | translate }}</span>
+                    </div>
+                    <div class="btn_section">
+                        <a [appSmoothScroll]="'aboutContactSection'">{{ 'lets_talk' | translate }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="skill_icon_section" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            <div class="skill_icon_content">
+                @for (skill of skills; track $index) {
+                <div class="single_icon">
+                    <img src="{{ skill.icon }}" alt="">
+                    <p>{{ skill.description }}</p>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
