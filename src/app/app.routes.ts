@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { provideRouter, withInMemoryScrolling } from "@angular/router";
 
 export const routes: Routes = [
 { path: '', redirectTo: 'main', pathMatch: 'full' }, 
