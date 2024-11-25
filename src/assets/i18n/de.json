@@ -272,5 +272,7 @@
     "created_with_privacy_generator": "Erstellt mit kostenlosem Datenschutz-Generator.de von Dr. Thomas Schwenke",
     "email_sent_successfully": "Die E-Mail wurde erfolgreich verschickt. Ich werde mich so schnell wie möglich bei Ihnen melden.",
     "email_is_not_correct": "Die E-Mail Adresse ist nicht gültig.",
-    "privacy_policy_error": "Bitte akzeptieren Sie die Datenschutzbestimmungen."
+    "privacy_policy_error": "Bitte akzeptieren Sie die Datenschutzbestimmungen.",
+    "email_invalid_error": "Bitte eine gültige E-Mail-Adresse eingeben."
+    
 }

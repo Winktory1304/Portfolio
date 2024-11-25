@@ -37,10 +37,19 @@
                     name="email"
                     type="email"
                     [ngClass]="{'error-placeholder': isSubmitted && emailInput.invalid}"
-                    [placeholder]="isSubmitted && emailInput.invalid ? ('placeholder_error_email' | translate) : ('placeholder_email' | translate)"
+                    [placeholder]="!contactData.email && isSubmitted ? ('placeholder_error_email' | translate) : ('placeholder_email' | translate)"
                     required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                     #emailInput="ngModel">
+                    <!-- Fehlerbenachrichtigung für leeres Feld -->
+                     <!-- <div *ngIf="isSubmitted && !contactData.email.trim()" class="error-text">
+                    {{ 'placeholder_error_email' | translate }}
+                    </div>     -->
+
+                    <!-- Fehlerbenachrichtigung -->
+                    <div *ngIf="isSubmitted && contactData.email.trim() && emailIsNotCorrect" class="error-text">
+                        {{ 'email_invalid_error' | translate }}
+                    </div>
             </div>
 
             <!-- Message Input Section -->
@@ -92,9 +101,9 @@
 </div>
 
 <!-- Incorrect Email Notification -->
-<div *ngIf="emailIsNotCorrect" class="wrongEmail-notification">
+<!-- <div *ngIf="emailIsNotCorrect" class="wrongEmail-notification">
     <div class="wrong-email-message">
         <p>{{ 'email_is_not_correct' | translate }}</p>
     </div>
-</div>
+</div> -->
 

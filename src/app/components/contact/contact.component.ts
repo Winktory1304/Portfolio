@@ -52,28 +52,38 @@ export class ContactComponent {
 
 
   checkInputFields(isValid: boolean): boolean {
+    // Name überprüfen
     if (!this.contactData.name.trim()) {
         isValid = false;
     }
+
+    // E-Mail überprüfen
     if (!this.contactData.email.trim()) {
+        // E-Mail ist leer
+        this.emailIsNotCorrect = false;  // Hier kein Formatfehler anzeigen
         isValid = false;
     } else if (!this.validateEmail(this.contactData.email)) {
+        // E-Mail ist nicht leer, aber ungültig
         this.emailIsNotCorrect = true;
         isValid = false;
-
-        setTimeout(() => {
-            this.emailIsNotCorrect = false;
-        }, 4000);
+    } else {
+        // E-Mail ist korrekt
+        this.emailIsNotCorrect = false;
     }
+
+    // Nachricht überprüfen
     if (!this.contactData.message.trim()) {
         isValid = false;
     }
+
+    // Datenschutz-Checkbox überprüfen
     if (!this.isCheckboxChecked) {
         this.checkboxError = true;
         isValid = false;
     } else {
         this.checkboxError = false;
     }
+
     return isValid;
 }
 
