@@ -3,28 +3,18 @@
         <div class="links">
             <img [src]="imageSrc" (mouseover)="onMouseOver()" (mouseout)="onMouseOut()" (click)="translateWebsite()"
                 alt="Language Toggle" style="cursor: pointer;">
-            <a class="pointer_cursor" [appSmoothScroll]="'aboutMeSection'">{{ 'about_me' | translate }} </a>
-            <a class="pointer_cursor" [appSmoothScroll]="'aboutProjectsSection'">{{ 'projects' | translate }}</a>
-            <a class="pointer_cursor" [appSmoothScroll]="'aboutSkillsSection'">{{ 'skills' | translate }}</a>
-        </div>
-        <div class="logo">
-            <div class="abbreviation">
-                <h3 class="fristname">Thomas</h3>
-                <h4 class="first_name_letter">T</h4>
-                <h4 class="last_name_letter">W</h4>
-            </div>
-            <div class="name">
-                <h3 class="lastname">Winkler</h3>
-            </div>
+            <a (click)="navigateToSection('aboutMeSection')" class="pointer_cursor">{{ 'about_me' | translate }}</a>
+            <a (click)="navigateToSection('aboutProjectsSection')" class="pointer_cursor">{{ 'projects' | translate }}</a>
+            <a (click)="navigateToSection('aboutSkillsSection')" class="pointer_cursor">{{ 'skills' | translate }}</a>
         </div>
         <div class="mobile_menu" (click)="toggleMenu()">
             <img src="../../../assets/img/menu-icon-white.png" alt="menu icon" class="menu-icon">
         </div>
         <div class="open_menu" *ngIf="isMenuOpen">
             <div class="mobile_links">
-                <a [appSmoothScroll]="'aboutMeSection'" (click)="toggleMenu()">{{ 'about_me' | translate }}</a>
-                <a [appSmoothScroll]="'aboutSkillsSection'"(click)="toggleMenu()">{{ 'skills' | translate }}</a>
-                <a [appSmoothScroll]="'aboutProjectsSection'"(click)="toggleMenu()">{{ 'projects' | translate }}</a>
+                <a (click)="navigateToSection('aboutMeSection'); toggleMenu()">{{ 'about_me' | translate }}</a>
+                <a (click)="navigateToSection('aboutSkillsSection'); toggleMenu()">{{ 'skills' | translate }}</a>
+                <a (click)="navigateToSection('aboutProjectsSection'); toggleMenu()">{{ 'projects' | translate }}</a>
                 <img [src]="imageSrc" 
                      (mouseover)="onMouseOver()" 
                      (mouseout)="onMouseOut()" 
