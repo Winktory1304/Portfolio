@@ -1,18 +1,22 @@
-<app-header></app-header>
 
-<section>
-    <div class="section_content">
-        <h1>{{ 'imprint' | translate }}</h1>
-        <div class="imprint_content">
-            <p>Thomas Winkler</p>
-            <p>Plauener Straße 52</p>
-            <p>13055 Berlin</p>
-            <p>thomaswinkler88&#64;googlemail.com</p>
+<div class="imprint-page">
+    <app-header></app-header>
+    
+    <section class="content-section">
+        <div class="section_content">
+            <h1>{{ 'imprint' | translate }}</h1>
+            <div class="imprint_content">
+                <p>Thomas Winkler</p>
+                <p>Plauener Straße 52</p>
+                <p>13055 Berlin</p>
+                <p>thomaswinkler88&#64;googlemail.com</p>
+            </div>
+            <div class="back_to_homepage">
+                <a href="/main">{{ 'back_to_homepage' | translate }} <img src="../../assets/img/arrow-forward-green.png" alt=""></a>
+            </div>
         </div>
-        <div class="back_to_homepage">
-            <a href="/main">{{ 'back_to_homepage' | translate }} <img src="../../assets/img/arrow-forward-green.png" alt=""></a>
-        </div>
-    </div>
-</section>
+    </section>
+    
+    <app-footer></app-footer>
 
-<app-footer></app-footer>
+</div>

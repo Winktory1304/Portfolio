@@ -1,10 +1,17 @@
 @import '../../styles.scss';
 @import '../../mixin.scss';
 
+.imprint-page {
+    overflow: hidden;  // Deaktiviert das Scrollen der gesamten Seite
+    height: 100vh;  
+}
+
+
 section {
     background-image: url("/assets/img/landingpage-background.png");
     background-repeat: no-repeat;
     background-size: cover;
+
 
     .section_content {
         padding-top: 80px;
@@ -28,6 +35,24 @@ section {
             font-size: 15px;
         }
     }
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 80px);
+}
+
+.content-section {
+    flex: 1; 
+}
+
+app-footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #1C1C1C; 
+    color: #fff; 
 }
 
 .back_to_homepage {
