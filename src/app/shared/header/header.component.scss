@@ -36,6 +36,7 @@ nav {
         font-family: 'Fira Code', sans-serif;
         font-weight: 400;
         font-size: 20px;
+        cursor: pointer;
 
         @media(max-width: 1110px) {
             font-size: 18px;
@@ -162,7 +163,7 @@ nav {
     }
 
     &:hover {
-        cursor: pointer;
+        cursor: pointer !important;
     }
 
     @media(max-width: 880px) {

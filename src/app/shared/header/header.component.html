@@ -22,9 +22,9 @@
         </div>
         <div class="open_menu" *ngIf="isMenuOpen">
             <div class="mobile_links">
-                <a [appSmoothScroll]="'aboutMeSection'">{{ 'about_me' | translate }}</a>
-                <a [appSmoothScroll]="'aboutSkillsSection'">{{ 'skills' | translate }}</a>
-                <a [appSmoothScroll]="'aboutProjectsSection'">{{ 'projects' | translate }}</a>
+                <a [appSmoothScroll]="'aboutMeSection'" (click)="toggleMenu()">{{ 'about_me' | translate }}</a>
+                <a [appSmoothScroll]="'aboutSkillsSection'"(click)="toggleMenu()">{{ 'skills' | translate }}</a>
+                <a [appSmoothScroll]="'aboutProjectsSection'"(click)="toggleMenu()">{{ 'projects' | translate }}</a>
                 <img [src]="imageSrc" 
                      (mouseover)="onMouseOver()" 
                      (mouseout)="onMouseOut()" 
