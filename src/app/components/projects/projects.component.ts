@@ -33,7 +33,7 @@ export class ProjectsComponent implements OnInit {
       title: "Join",
       technologies: this.getTechnologiesForJoin(),
       githubLink: "https://github.com/Winktory1304/Join",
-      // livetestLink: "",
+      livetestLink: "https://thomas-thw-winkler.de/Join/index.html",
       imageSrc: "assets/img/join-preview.png",
       descriptionKey: "join"
     },
@@ -42,7 +42,7 @@ export class ProjectsComponent implements OnInit {
       title: "El Pollo Loco",
       technologies: this.getTechnologiesForElPolloLoco(),
       githubLink: "https://github.com/Winktory1304/PolloLoco",
-      // livetestLink: "",
+      livetestLink: "https://thomas-thw-winkler.de/pollo/El_Pollo_Loco/index.html",
       imageSrc: "assets/img/el-pollo-loco-preview.png",
       descriptionKey: "el_pollo_loco"
     },
