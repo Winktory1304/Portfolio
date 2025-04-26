@@ -13,7 +13,7 @@
                     <div class="project_details">
                         <h1>{{ getFormattedNumber(selectedProject?.number ?? 0) }}</h1>
                         <h2>{{ selectedProject?.title }}</h2>
-                        <h3>What is this project about?</h3>
+                        <h3>{{ 'what_is_this_project_about' | translate }}</h3>
                         <p class="description">{{ 'projectPopUp.' + getProjectKey(selectedProject?.title) + '.description' | translate }}</p>
                         <div class="project_details_technologies">
                             <div class="single_technology" *ngFor="let tech of selectedProject?.technologies">
