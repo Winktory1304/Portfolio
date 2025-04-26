@@ -148,6 +148,18 @@
         }
     }
 
+    h2{
+        font-family: 'Fira Code', sans-serif;
+
+        @media(max-width: 1110px) {
+            font-size: 50px;
+        }
+
+        @media(max-width: 465px) {
+            font-size: 40px;
+        }
+    }
+
 
     img {
         height: 32px;

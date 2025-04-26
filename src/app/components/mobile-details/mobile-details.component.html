@@ -20,7 +20,7 @@
             </div>
             <div class="project_details_btn_section">
                 <a href="{{ selectedProject?.githubLink}}">Github</a>
-                <!-- <a href="">Live Test</a> -->
+                <a href="{{ selectedProject?.livetestLink}}">Live Test</a>
             </div>
             <div (click)="showNextProject()" class="next_project">
                 <span>next project<img src="../../../assets/img/arrow-forward-green.png" alt=""></span>
