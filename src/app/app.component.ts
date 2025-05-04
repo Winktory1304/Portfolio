@@ -18,6 +18,8 @@ import { BrowserModule } from '@angular/platform-browser';
   selector: 'app-root',
   standalone: true,
   imports: [
+    HeaderComponent,
+    FooterComponent,
     CommonModule,
     RouterOutlet,   
     TranslateModule,
